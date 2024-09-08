@@ -1,0 +1,43 @@
+site_name: Leo's Cheatsheets
+theme:
+  name: material
+  font:
+    code: Roboto markdown_extensions
+  palette:
+    - scheme: default
+      primary: purple
+      accent: purple
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+
+    # Dark mode
+    - scheme: slate
+      primary: purple
+      accent: purple
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  features:
+    - navigation.expand
+    - search.highlight
+    - dark_mode
+
+nav:
+  - Home: "index.md"
+  - Frameworks:
+      - Vue & Nuxt:
+          - Basics of Vue: "frameworks/vue-nuxt/basics-of-vue.md"
+          - Basics of Nuxt: "frameworks/vue-nuxt/basics-of-nuxt.md"
+  - Dangerous & Outdated:
+      - Basics of Symfony: "dangerous-outdated/symfony/basics-of-symfony.md"
+      - Django Deployment on Render: "dangerous-outdated/django-deployment-on-render.md"
+
+plugins:
+  - search
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - codehilite

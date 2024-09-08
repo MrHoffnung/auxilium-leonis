@@ -7,15 +7,6 @@
 " width="150px" height="auto">
 </div>
 
-## Table of Contents
-
-- [Pre-Requirements](#pre-requirements)
-- [Deployment](#deployment)
-  - [Seperating the Settings](#seperating-the-settings)
-  - [Setting Environment Variables with Dotenv](#setting-environment-variables-with-dotenv)
-  - [Extending the Settings](#extending-the-settings)
-  - [Creating the Dockerfile](#creating-the-dockerfile)
-
 ## Pre-Requirements
 
 - A Django app running in development mode

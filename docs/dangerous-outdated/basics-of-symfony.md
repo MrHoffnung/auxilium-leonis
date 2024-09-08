@@ -2,32 +2,6 @@
 
 <img src="https://www.svgrepo.com/show/342277/symfony.svg" width="150px" height="auto">
 
-Symfony is a set of PHP Components, a Web Application framework, a Philosophy, and a Community — all working together in harmony.
-
-## Table of Contents
-
-- [Pre-Requirements](#pre-requirements)
-- [Installation](#installation)
-  - [Step 1: Create Project Directory](#1-step-create-the-project-directory-and-switch-into-this-directory)
-  - [Step 2: Initialize DDEV Project](#2-step-initialize-the-ddev-project-select-public-for-docroot-location)
-  - [Step 3: Change DDEV PHP Version](#3-step-change-the-ddev-php-version-to-the-newest-stable-php-build)
-  - [Step 4: Cleaning Up](#4-step-cleaning-up)
-  - [Step 5: Start DDEV](#5-step-starting-ddev)
-  - [Step 6: Install Symfony](#6-step-installing-symfony)
-- [Project Structure](#project-structure)
-- [Controller](#controller)
-- [Templates](#templates)
-- [Installing Tailwind](#installing-tailwind)
-  - [Step 1: Install Tailwind Bundle](#1-step-install-the-tailwind-bundle)
-  - [Step 2: Initialize Tailwind](#2-step-initialize-tailwind)
-  - [Step 3: Build and Watch for Changes](#3-step-build-and-watch-for-changes-must-be-executed-on-every-ddev-startup)
-- [CSRF](#csrf)
-  - [CSRF in Forms](#csrf-in-forms)
-- [Forms](#forms)
-- [Entities & Databases](#entities--databases)
-- [Repositories](#repositories)
-- [Services](#services)
-- [Flash Messages](#flash-messages)
 
 ## Pre-Requirements:
 
