@@ -1,0 +1,1193 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../basics-of-vue/">
+      
+      
+        <link rel="next" href="../../../dangerous-outdated/django-deployment-on-render/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+    
+    
+      
+        <title>Basics of Nuxt - Leo's Cheatsheets</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.35f28582.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+markdown_extensions:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto markdown_extensions"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="purple" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#basics-of-nuxt" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Leo&#39;s Cheatsheets" class="md-header__button md-logo" aria-label="Leo's Cheatsheets" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Leo's Cheatsheets
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Basics of Nuxt
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="purple" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="purple" data-md-color-accent="purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Leo&#39;s Cheatsheets" class="md-nav__button md-logo" aria-label="Leo's Cheatsheets" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Leo's Cheatsheets
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Frameworks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Frameworks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Vue & Nuxt
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Vue & Nuxt
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basics-of-vue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basics of Vue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Basics of Nuxt
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Basics of Nuxt
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#disclaimer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disclaimer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-nuxt-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Nuxt App
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#external-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      External Libraries
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pages-routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pages &amp; Routing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pages & Routing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#routing-with-params" class="md-nav__link">
+    <span class="md-ellipsis">
+      Routing with Params
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linking-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linking Pages
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Layouts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Layouts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overriding-the-default-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overriding the Default Layout
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Components
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Errors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Errors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#throwing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Throwing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Routes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Server Routes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-requets" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET-Requets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST-Requests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dynamic Routes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment Variables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#showing-off-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Showing Off Knowledge
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Showing Off Knowledge">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#editing-the-head" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editing the Head
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dangerous & Outdated
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Dangerous & Outdated
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dangerous-outdated/symfony/basics-of-symfony.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basics of Symfony
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dangerous-outdated/django-deployment-on-render/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django Deployment on Render
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#disclaimer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disclaimer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-nuxt-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Nuxt App
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#external-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      External Libraries
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pages-routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pages &amp; Routing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pages & Routing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#routing-with-params" class="md-nav__link">
+    <span class="md-ellipsis">
+      Routing with Params
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linking-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linking Pages
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Layouts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Layouts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overriding-the-default-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overriding the Default Layout
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Components
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Errors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Errors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#throwing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Throwing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Routes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Server Routes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-requets" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET-Requets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST-Requests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dynamic Routes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment Variables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#showing-off-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Showing Off Knowledge
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Showing Off Knowledge">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#editing-the-head" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editing the Head
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="basics-of-nuxt">Basics of Nuxt<a class="headerlink" href="#basics-of-nuxt" title="Permanent link">&para;</a></h1>
+<p><img src="https://nuxt.com/assets/design-kit/icon-green.svg" width="150px" height="auto">
+<br></p>
+<blockquote>
+<p>Based on the YouTube playlist "<a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9haQlqdCQyYmL_27TesCGPC">Nuxt 3 Tutorial</a>" by <a href="https://www.youtube.com/@NetNinja">Net Ninja</a>.</p>
+</blockquote>
+<h2 id="disclaimer">Disclaimer<a class="headerlink" href="#disclaimer" title="Permanent link">&para;</a></h2>
+<p>Like all of my cheatsheets, this one is not guaranteed to be correct. The official documentation for Nuxt can be found <a href="https://nuxt.com/docs/getting-started/introduction">here</a>. Please note also that the predecessor of this cheatsheet is "<a href="../basics-of-vue/">Basics of Vue</a>".</p>
+<h2 id="creating-a-nuxt-app">Creating a Nuxt App<a class="headerlink" href="#creating-a-nuxt-app" title="Permanent link">&para;</a></h2>
+<p>In this case we create our Nuxt project with Bun because it's Zig 🤣!</p>
+<div class="codehilite"><pre><span></span><code><span class="n">bun</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">nuxi</span><span class="nv">@latest</span><span class="w"> </span><span class="n">init</span><span class="w"> </span><span class="o">&lt;</span><span class="n">your</span><span class="o">-</span><span class="n">project</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>
+<span class="n">cd</span><span class="w"> </span><span class="o">&lt;</span><span class="n">project</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>
+<span class="n">sudo</span><span class="w"> </span><span class="n">npm</span><span class="w"> </span><span class="n">install</span>
+<span class="n">bun</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="n">dev</span>
+</code></pre></div>
+
+<p>After installation, you should simply delete the <code>app.vue</code> file from the route directory as quickly as possible so that you have an empty Nuxt page.</p>
+<h2 id="external-libraries">External Libraries<a class="headerlink" href="#external-libraries" title="Permanent link">&para;</a></h2>
+<p>Nuxt has a large eco-system of easy-installable modules like <a href="https://nuxt.com/modules/tailwindcss">Tailwindcss</a> or <a href="https://nuxt.com/modules/pinia">Pinia</a>. You can find every module on the <a href="https://nuxt.com/modules">Nuxt modules page</a> including documentation and installation instructions.</p>
+<h2 id="pages-routing">Pages &amp; Routing<a class="headerlink" href="#pages-routing" title="Permanent link">&para;</a></h2>
+<p>Nuxt makes page creation and routing easy compared to Vue by doing it automatically. All you have to do is to create a <code>pages/</code> folder inside the root-directory of you project. The routing which causes of the folder structure is straight forward:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">pages</span><span class="o">/</span>
+<span class="w">    </span><span class="nf">index</span><span class="p">.</span><span class="n">vue</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">example</span><span class="p">.</span><span class="n">com</span><span class="o">/</span>
+<span class="w">    </span><span class="n">about</span><span class="p">.</span><span class="n">vue</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">example</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">about</span>
+<span class="w">    </span><span class="n">products</span><span class="o">/</span>
+<span class="w">        </span><span class="n">hello</span><span class="p">.</span><span class="n">vue</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">example</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">products</span><span class="o">/</span><span class="n">about</span>
+</code></pre></div>
+
+<h3 id="routing-with-params">Routing with Params<a class="headerlink" href="#routing-with-params" title="Permanent link">&para;</a></h3>
+<p>Nuxt also makes it easy to use route parameters. All you need to do is create a file or a folder with the same name as the route parameter but enclosed in square brackets. You can access these parameters by using and destructuring <code>useRoute().params</code>.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">pages</span><span class="o">/</span>
+<span class="w">    </span><span class="n">products</span><span class="o">/</span>
+<span class="w">        </span><span class="o">[</span><span class="n">id</span><span class="o">]</span><span class="p">.</span><span class="n">vue</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.</span><span class="w"> </span><span class="n">example</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">products</span><span class="o">/</span><span class="mi">12</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;template&gt;</span>
+<span class="w">  </span><span class="nt">&lt;div&gt;</span>
+<span class="w">    </span><span class="nt">&lt;p&gt;</span>Product<span class="w"> </span>details<span class="w"> </span>for<span class="w"> </span><span class="cp">{{</span> <span class="nv">id</span> <span class="cp">}}</span><span class="nt">&lt;/p&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/template&gt;</span>
+
+<span class="nt">&lt;script</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;ts&quot;</span><span class="w"> </span><span class="err">setup</span><span class="nt">&gt;</span>
+const<span class="w"> </span>{<span class="w"> </span>id<span class="w"> </span>}<span class="w"> </span>=<span class="w"> </span>useRoute().params;
+<span class="nt">&lt;/script&gt;</span>
+
+<span class="nt">&lt;style&gt;&lt;/style&gt;</span>
+</code></pre></div>
+
+<h3 id="linking-pages">Linking Pages<a class="headerlink" href="#linking-pages" title="Permanent link">&para;</a></h3>
+<p>Like Vue (<code>RouterLink</code>), Nuxt has its own tag for creating links that increases efficiency and stays true to the philosophy of single-page applications: the <code>NuxtLink</code> tag. Additionally, this tag adds HTML classes, such as <code>router-link-active</code> and <code>router-link-exact-active</code>, that can help you style your application.</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;NuxtLink</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;/&quot;</span><span class="nt">&gt;</span>Nuxt<span class="w"> </span>Dojo<span class="nt">&lt;/NuxtLink&gt;</span>
+</code></pre></div>
+
+<h2 id="layouts">Layouts<a class="headerlink" href="#layouts" title="Permanent link">&para;</a></h2>
+<p>Layouts define the basic template structure of a Nuxt application by wrapping the pages. For example, they can include headers and footers on every page, thus avoiding a lot of boilerplate code. To create the default layout, just create <code>layouts/default.vue</code> in the root directory.</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;template&gt;</span>
+<span class="w">  </span><span class="nt">&lt;div&gt;</span>
+<span class="w">    </span><span class="nt">&lt;header&gt;</span>
+<span class="w">      </span><span class="nt">&lt;nav&gt;</span>
+<span class="w">        </span><span class="nt">&lt;NuxtLink</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;/&quot;</span><span class="nt">&gt;</span>Nuxt<span class="w"> </span>Dojo<span class="nt">&lt;/NuxtLink&gt;</span>
+<span class="w">        </span><span class="nt">&lt;ul&gt;</span>
+<span class="w">          </span><span class="nt">&lt;li&gt;</span>
+<span class="w">            </span><span class="nt">&lt;NuxtLink</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;/&quot;</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/NuxtLink&gt;</span>
+<span class="w">            </span><span class="nt">&lt;NuxtLink</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;/about&quot;</span><span class="nt">&gt;</span>About<span class="nt">&lt;/NuxtLink&gt;</span>
+<span class="w">            </span><span class="nt">&lt;NuxtLink</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;/products&quot;</span><span class="nt">&gt;</span>Products<span class="nt">&lt;/NuxtLink&gt;</span>
+<span class="w">          </span><span class="nt">&lt;/li&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/ul&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/nav&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/header&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;div&gt;</span>
+<span class="w">      </span><span class="cm">&lt;!-- The slot tag is replaced by the actual content of the side --&gt;</span>
+<span class="w">      </span><span class="nt">&lt;slot</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/div&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/template&gt;</span>
+</code></pre></div>
+
+<h3 id="overriding-the-default-layout">Overriding the Default Layout<a class="headerlink" href="#overriding-the-default-layout" title="Permanent link">&para;</a></h3>
+<p>Sometimes you want to override the default layout, and guess what: it's not hard 🙂! You just need to create your new layout (e.g. "products.vue") in the "layouts/" folder and add this code on the page whose layout you want to override:</p>
+<div class="codehilite"><pre><span></span><code><span class="nx">definePageMeta</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">layout</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;products&quot;</span><span class="p">,</span>
+<span class="p">});</span>
+</code></pre></div>
+
+<h2 id="components">Components<a class="headerlink" href="#components" title="Permanent link">&para;</a></h2>
+<p>As in Vue, components can also be created in Nuxt, which have a big advantage or disadvantage depending on your perspective: they are imported automatically. This results in less boilerplate code if the components are in <code>components/</code>, but creates <a href="https://stackoverflow.com/questions/74078596/how-do-i-register-components-in-subfolders-in-nuxt">this boilerplate code</a> if they are in a subfolder.</p>
+<h2 id="errors">Errors<a class="headerlink" href="#errors" title="Permanent link">&para;</a></h2>
+<h3 id="handling">Handling<a class="headerlink" href="#handling" title="Permanent link">&para;</a></h3>
+<p>Error Handling in Nuxt is really straight forward. All we have to do is to create a <code>error.vue</code> component in the root directory.</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;template&gt;</span>
+<span class="w">  </span><span class="nt">&lt;div</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;mt-7 max-w-sm mx-auto text-center card&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;p</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;mt-7 text-7xl font-bold&quot;</span><span class="nt">&gt;</span><span class="cp">{{</span> <span class="nv">error.statusCode</span> <span class="cp">}}</span><span class="nt">&lt;/p&gt;</span>
+<span class="w">    </span><span class="nt">&lt;p</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;mt-7 text-6xl&quot;</span><span class="nt">&gt;</span>Ooops.<span class="nt">&lt;/p&gt;</span>
+<span class="w">    </span><span class="nt">&lt;p</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;mt-7&quot;</span><span class="nt">&gt;</span><span class="cp">{{</span> <span class="nv">error.message</span> <span class="cp">}}</span><span class="nt">&lt;/p&gt;</span>
+<span class="w">    </span><span class="nt">&lt;button</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;btn my-7&quot;</span><span class="w"> </span><span class="err">@</span><span class="na">click=</span><span class="s">&quot;handleError&quot;</span><span class="nt">&gt;</span>Go<span class="w"> </span>Home...<span class="nt">&lt;/button&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/template&gt;</span>
+
+<span class="nt">&lt;script</span><span class="w"> </span><span class="err">setup</span><span class="nt">&gt;</span>
+//<span class="w"> </span>Accepts<span class="w"> </span>the<span class="w"> </span>error<span class="w"> </span>from<span class="w"> </span>Nuxt
+defineProps({
+<span class="w">  </span>error:<span class="w"> </span>Object,
+});
+
+//<span class="w"> </span>Clearing<span class="w"> </span>the<span class="w"> </span>error
+const<span class="w"> </span>handleError<span class="w"> </span>=<span class="w"> </span>()<span class="w"> </span>=&gt;<span class="w"> </span>clearError({<span class="w"> </span>redirect:<span class="w"> </span>&quot;/&quot;<span class="w"> </span>});
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div>
+
+<h3 id="throwing">Throwing<a class="headerlink" href="#throwing" title="Permanent link">&para;</a></h3>
+<p>Throwing error is obviously easier than handling them.</p>
+<div class="codehilite"><pre><span></span><code><span class="k">throw</span><span class="w"> </span><span class="nx">createError</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">statusCode</span><span class="o">:</span><span class="w"> </span><span class="mf">404</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">statusMessage</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Product not found&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">fatal</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="p">});</span>
+</code></pre></div>
+
+<h2 id="server-routes">Server Routes<a class="headerlink" href="#server-routes" title="Permanent link">&para;</a></h2>
+<p>Nuxt Server Routes let you handle backend tasks directly within Nuxt.js, such as data processing, creating API endpoints, simple server-side authentication, and database interactions. They’re great for small to medium projects where a full backend like Django isn’t needed. However, for larger, more complex applications, a dedicated backend framework like Django is more scalable and robust. In this case they are still often used as proxies to avoid exposing sensible data to the frontend.</p>
+<p>Server routes are created in the <code>server/api/</code> folder. Every endpoint is a seperate TypeScript file. You can access the server with e.g. <code>useFetch('/api/yourendpoint')</code>.</p>
+<h3 id="get-requets">GET-Requets<a class="headerlink" href="#get-requets" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">defineEventHandler</span><span class="p">((</span><span class="nx">event</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Get query params</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useQuery</span><span class="p">(</span><span class="nx">event</span><span class="p">);</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="sb">`Hello, </span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb">!`</span><span class="p">,</span>
+<span class="w">  </span><span class="p">};</span>
+<span class="p">});</span>
+</code></pre></div>
+
+<h3 id="post-requests">POST-Requests<a class="headerlink" href="#post-requests" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="c1">// Post requests must be asynchronous to access the body.</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">defineEventHandler</span><span class="p">(</span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">event</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useQuery</span><span class="p">(</span><span class="nx">event</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Get body</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">age</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">useBody</span><span class="p">(</span><span class="nx">event</span><span class="p">);</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="sb">`Hello, </span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb">! You are </span><span class="si">${</span><span class="nx">age</span><span class="si">}</span><span class="sb"> years old.`</span><span class="p">,</span>
+<span class="w">  </span><span class="p">};</span>
+<span class="p">});</span>
+</code></pre></div>
+
+<h3 id="dynamic-routes">Dynamic Routes<a class="headerlink" href="#dynamic-routes" title="Permanent link">&para;</a></h3>
+<p>Like in the frontend you can also use dynamic routes, by naming your TypeScript in square brackets. These routes are then accessible in the endpoint:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">// server/api/[code].ts</span>
+<span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">code</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">event</span><span class="p">.</span><span class="nx">context</span><span class="p">.</span><span class="nx">params</span><span class="p">;</span>
+</code></pre></div>
+
+<h3 id="environment-variables">Environment Variables<a class="headerlink" href="#environment-variables" title="Permanent link">&para;</a></h3>
+<p>Server routes also allow us to use environment variables using <code>.env</code> files. Before we can use environment variables we have to define them in the <code>nuxt.config.ts</code> file.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">// https://nuxt.com/docs/api/configuration/nuxt-config</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">defineNuxtConfig</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">runtimeConfig</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">variable</span><span class="o">:</span><span class="w"> </span><span class="kt">process.env.VARIABLE</span><span class="p">,</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">});</span>
+</code></pre></div>
+
+<p>After this we can use them in the backend.</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">variable</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useRuntimeConfig</span><span class="p">();</span>
+</code></pre></div>
+
+<blockquote>
+<p>Please note that you should use <code>$fetch</code> in the Nuxt "backend" instead of <code>useFetch</code> if you want to communicate with the real backend.</p>
+</blockquote>
+<h2 id="showing-off-knowledge">Showing Off Knowledge<a class="headerlink" href="#showing-off-knowledge" title="Permanent link">&para;</a></h2>
+<h3 id="editing-the-head">Editing the Head<a class="headerlink" href="#editing-the-head" title="Permanent link">&para;</a></h3>
+<p>You can gloabally edit the HTML-head by editing the <code>nuxt.config.ts</code> file.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">// https://nuxt.com/docs/api/configuration/nuxt-config</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">defineNuxtConfig</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">app</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">head</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Nuxt Dojo&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">meta</span><span class="o">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;description&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Everything about Nuxt 3&quot;</span><span class="w"> </span><span class="p">}],</span>
+<span class="w">      </span><span class="nx">link</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nx">rel</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;stylesheet&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">href</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;https://fonts.googleapis.com/icon?family=Material+Icons&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">      </span><span class="p">],</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">});</span>
+</code></pre></div>
+
+<p>Or use <code>useHead</code> if you just want to change the head on a single page.</p>
+<div class="codehilite"><pre><span></span><code><span class="nx">useHead</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Nuxt Dojo | Merch&quot;</span><span class="p">,</span>
+<span class="p">});</span>
+</code></pre></div>
+
+<p>If you are a really cool frontend developer and want to stay with components use the <a href="https://nuxt.com/docs/getting-started/seo-meta#components">build-in components</a>, like <code>Head</code> or <code>Title</code>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand", "search.highlight", "dark_mode"], "search": "../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+    
+  </body>
+</html>
