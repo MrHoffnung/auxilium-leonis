@@ -3,6 +3,8 @@
 <img src="https://cdn.iconscout.com/icon/free/png-256/free-vuejs-1175052.png" width="150px" height="auto">
 <br>
 
+> Based on the YouTube video "[Vue.js Crash Course 2024](https://www.youtube.com/watch?v=VeNfHj6MhgA)" by [Traversy Media](https://www.youtube.com/@TraversyMedia).
+
 ## Disclaimer
 
 Like all of my cheatsheets, this one is not guaranteed to be correct. The official documentation for Vue can be found [here](https://vuejs.org/).
