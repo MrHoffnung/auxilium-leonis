@@ -35,7 +35,7 @@ Here’s how you can write about **Ordinary Least Squares (OLS)** using `scikit-
 
 Ordinary Least Squares (OLS) is a method used in linear regression to estimate the coefficients of the linear model. It minimizes the sum of the squared differences between the observed values and the values predicted by the linear model. This results in the "best fit" line through the data points.
 
-## Usage
+### Usage
 
 To implement OLS in Python using `scikit-learn`, you can use the `LinearRegression` class:
 
@@ -58,7 +58,7 @@ predictions = model.predict([[6], [7]])
 print("Predicted values:", predictions)
 ```
 
-## Use Cases
+### Use Cases
 
 - **Predicting Housing Prices**: OLS can be used to predict house prices based on features like square footage, number of bedrooms, and location.
 
@@ -76,7 +76,7 @@ In all these cases, OLS helps find the linear relationship between the independe
 
 Stochastic Gradient Descent (SGD) is an optimization method used to minimize the loss function in machine learning models, particularly in linear regression and classification tasks. Unlike batch gradient descent, which uses the entire dataset to compute the gradient, SGD updates the model's parameters using one or a few training examples at a time. This makes it faster and more efficient for large datasets.
 
-## Usage
+### Usage
 
 To implement SGD in Python using `scikit-learn`, you can use the `SGDRegressor` or `SGDClassifier` class, depending on your task. Here’s an example using `SGDRegressor` for a linear regression task:
 
@@ -99,7 +99,7 @@ predictions = model.predict([[6], [7]])
 print("Predicted values:", predictions)
 ```
 
-## Use Cases
+### Use Cases
 
 - **Real-Time Prediction**: Due to its efficiency, SGD is commonly used in online learning settings where the model needs to be updated continuously as new data arrives.
 
