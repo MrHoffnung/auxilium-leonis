@@ -11,7 +11,7 @@ _In statistics and machine learning, a loss function quantifies the losses gener
 
 _The minimization of the expected loss, called statistical risk, is one of the guiding principles in statistical modelling._
 
-> **Source:** https://www.statlect.com/glossary/loss-function
+> **Source:** [https://www.statlect.com/glossary/loss-function](https://www.statlect.com/glossary/loss-function)
 
 The MSE is a way to measure how well a linear regression model fits the data. It does this by calculating the average of the squares of the differences between the actual values and the predicted values.
 
