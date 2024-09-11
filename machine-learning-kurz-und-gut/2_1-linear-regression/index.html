@@ -418,9 +418,10 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Ordinary Least Squares (OLS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#usage" class="md-nav__link">
     <span class="md-ellipsis">
       Usage
@@ -428,13 +429,18 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#use-cases" class="md-nav__link">
     <span class="md-ellipsis">
       Use Cases
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -445,9 +451,10 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Stochastic Gradient Descent (SGD)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#usage_1" class="md-nav__link">
     <span class="md-ellipsis">
       Usage
@@ -455,13 +462,18 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#use-cases_1" class="md-nav__link">
     <span class="md-ellipsis">
       Use Cases
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -763,9 +775,10 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Ordinary Least Squares (OLS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#usage" class="md-nav__link">
     <span class="md-ellipsis">
       Usage
@@ -773,13 +786,18 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#use-cases" class="md-nav__link">
     <span class="md-ellipsis">
       Use Cases
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -790,9 +808,10 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Stochastic Gradient Descent (SGD)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#usage_1" class="md-nav__link">
     <span class="md-ellipsis">
       Usage
@@ -800,13 +819,18 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#use-cases_1" class="md-nav__link">
     <span class="md-ellipsis">
       Use Cases
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -857,7 +881,7 @@
 <p>Here’s how you can write about <strong>Ordinary Least Squares (OLS)</strong> using <code>scikit-learn</code>, including its usage and some common use cases:</p>
 <h2 id="ordinary-least-squares-ols">Ordinary Least Squares (OLS)<a class="headerlink" href="#ordinary-least-squares-ols" title="Permanent link">&para;</a></h2>
 <p>Ordinary Least Squares (OLS) is a method used in linear regression to estimate the coefficients of the linear model. It minimizes the sum of the squared differences between the observed values and the values predicted by the linear model. This results in the "best fit" line through the data points.</p>
-<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
+<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>To implement OLS in Python using <code>scikit-learn</code>, you can use the <code>LinearRegression</code> class:</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
 
@@ -877,7 +901,7 @@
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Predicted values:&quot;</span><span class="p">,</span> <span class="n">predictions</span><span class="p">)</span>
 </code></pre></div>
 
-<h2 id="use-cases">Use Cases<a class="headerlink" href="#use-cases" title="Permanent link">&para;</a></h2>
+<h3 id="use-cases">Use Cases<a class="headerlink" href="#use-cases" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p><strong>Predicting Housing Prices</strong>: OLS can be used to predict house prices based on features like square footage, number of bedrooms, and location.</p>
@@ -898,7 +922,7 @@
 <p>In all these cases, OLS helps find the linear relationship between the independent variables (features) and the dependent variable (target), allowing for accurate predictions and insights.</p>
 <h2 id="stochastic-gradient-descent-sgd">Stochastic Gradient Descent (SGD)<a class="headerlink" href="#stochastic-gradient-descent-sgd" title="Permanent link">&para;</a></h2>
 <p>Stochastic Gradient Descent (SGD) is an optimization method used to minimize the loss function in machine learning models, particularly in linear regression and classification tasks. Unlike batch gradient descent, which uses the entire dataset to compute the gradient, SGD updates the model's parameters using one or a few training examples at a time. This makes it faster and more efficient for large datasets.</p>
-<h2 id="usage_1">Usage<a class="headerlink" href="#usage_1" title="Permanent link">&para;</a></h2>
+<h3 id="usage_1">Usage<a class="headerlink" href="#usage_1" title="Permanent link">&para;</a></h3>
 <p>To implement SGD in Python using <code>scikit-learn</code>, you can use the <code>SGDRegressor</code> or <code>SGDClassifier</code> class, depending on your task. Here’s an example using <code>SGDRegressor</code> for a linear regression task:</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">SGDRegressor</span>
 
@@ -918,7 +942,7 @@
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Predicted values:&quot;</span><span class="p">,</span> <span class="n">predictions</span><span class="p">)</span>
 </code></pre></div>
 
-<h2 id="use-cases_1">Use Cases<a class="headerlink" href="#use-cases_1" title="Permanent link">&para;</a></h2>
+<h3 id="use-cases_1">Use Cases<a class="headerlink" href="#use-cases_1" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p><strong>Real-Time Prediction</strong>: Due to its efficiency, SGD is commonly used in online learning settings where the model needs to be updated continuously as new data arrives.</p>
