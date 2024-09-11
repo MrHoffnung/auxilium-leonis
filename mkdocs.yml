@@ -25,12 +25,16 @@ theme:
 
 nav:
   - Home: "index.md"
+  - Machine Learning:
+      - Machine Learning kurz & gut:
+          - Overview: "machine-learning-kurz-und-gut/overview.md"
+          - 2.1 Linear Regression: "machine-learning-kurz-und-gut/2_1-linear-regression.md"
   - Frameworks:
       - Vue & Nuxt:
           - Basics of Vue: "frameworks/vue-nuxt/basics-of-vue.md"
           - Basics of Nuxt: "frameworks/vue-nuxt/basics-of-nuxt.md"
   - Dangerous & Outdated:
-      - Basics of Symfony: "dangerous-outdated/symfony/basics-of-symfony.md"
+      - Basics of Symfony: "dangerous-outdated/basics-of-symfony.md"
       - Django Deployment on Render: "dangerous-outdated/django-deployment-on-render.md"
 
 plugins:
@@ -41,3 +45,10 @@ markdown_extensions:
       permalink: true
   - admonition
   - codehilite
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - mathjax/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js

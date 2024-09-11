@@ -279,6 +279,16 @@ files = [
 ]
 
 [[package]]
+name = "mathjax"
+version = "0.1.2"
+description = "Stub that prevents name clash with https://github.com/conda-forge/mathjax-feedstock For MathJax see https://github.com/kiwi0fruit/py-mathjax"
+optional = false
+python-versions = "*"
+files = [
+    {file = "mathjax-0.1.2.tar.gz", hash = "sha256:d3cd7e9da557381134321c423ccf4622b7425c4314914e52e1ec4849aaecfb1f"},
+]
+
+[[package]]
 name = "mergedeep"
 version = "1.3.4"
 description = "A deep merge function for 🐍."
@@ -732,4 +742,4 @@ watchmedo = ["PyYAML (>=3.10)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "22134c519753bf6c86e3b9de591421d90f61cb08422de3f7802251436c994f97"
+content-hash = "42b16db3daf299eb8bc726876b48ef9fa8f88a1989987cbc026d85cd5171626b"

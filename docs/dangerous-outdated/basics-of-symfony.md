@@ -2,22 +2,12 @@
 
 <img src="https://www.svgrepo.com/show/342277/symfony.svg" width="150px" height="auto">
 
-
-## Pre-Requirements:
-
-- **PHP**: [Install](https://www.geeksforgeeks.org/how-to-install-php-on-ubuntu/)
-- **Docker**: [Install](https://docs.docker.com/engine/install/ubuntu/)
-- **DDEV**: [Install](https://ddev.readthedocs.io/en/stable/users/install/ddev-installation/)
-
 ## Installation
 
-**1. Step**: Create the project directory and switch into this directory:
+This guide to installing Symfony requires Docker and DDEV.
 
 ```
 mkdir <project>
-```
-
-```
 cd <project>
 ```
 
@@ -57,6 +47,7 @@ ddev start
 
 ```
 ddev composer create symfony/skeleton
+ddev composer require twig
 ```
 
 ## Project Structure
@@ -98,20 +89,10 @@ class IndexController {
         return new Response("Hallo Welt!");
     }
 }
-
-?>
 ```
 
 ## Templates
 
-Before we can use templates, we have to install `Twig` first:
-
-```
-ddev composer require twig
-```
-
-After the execution of this command a new folder named `templates/` will be created.
-<br>
 To render a template, [our controller](#controller) must inherit from `AbstractController`. An `AbstractController` can use the `render` method:
 
 ```php
