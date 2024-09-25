@@ -33,6 +33,8 @@ nav:
       - Vue & Nuxt:
           - Basics of Vue: "frameworks/vue-nuxt/basics-of-vue.md"
           - Basics of Nuxt: "frameworks/vue-nuxt/basics-of-nuxt.md"
+      - Symfony:
+          - Basics of Symfony: "frameworks/symfony/basics-of-symfony.md"
   - Dangerous & Outdated:
       - Basics of Symfony: "dangerous-outdated/basics-of-symfony.md"
       - Django Deployment on Render: "dangerous-outdated/django-deployment-on-render.md"
