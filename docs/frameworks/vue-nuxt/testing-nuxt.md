@@ -266,7 +266,7 @@ To execute the tests run:
 bun playwright test
 ```
 
-## Show Of Knowledge
+## Showing Of Knowledge
 
 ### The Power Of Expect
 
