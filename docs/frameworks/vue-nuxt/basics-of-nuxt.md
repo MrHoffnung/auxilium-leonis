@@ -48,7 +48,7 @@ pages/
         [id].vue -> e.g. example.com/products/12
 ```
 
-```vue
+```html
 <template>
   <div>
     <p>Product details for {{ id }}</p>
@@ -66,7 +66,7 @@ const { id } = useRoute().params;
 
 Like Vue (`RouterLink`), Nuxt has its own tag for creating links that increases efficiency and stays true to the philosophy of single-page applications: the `NuxtLink` tag. Additionally, this tag adds HTML classes, such as `router-link-active` and `router-link-exact-active`, that can help you style your application.
 
-```vue
+```html
 <NuxtLink to="/">Nuxt Dojo</NuxtLink>
 ```
 
@@ -74,7 +74,7 @@ Like Vue (`RouterLink`), Nuxt has its own tag for creating links that increases 
 
 Layouts define the basic template structure of a Nuxt application by wrapping the pages. For example, they can include headers and footers on every page, thus avoiding a lot of boilerplate code. To create the default layout, just create `layouts/default.vue` in the root directory.
 
-```vue
+```html
 <template>
   <div>
     <header>
@@ -118,7 +118,7 @@ As in Vue, components can also be created in Nuxt, which have a big advantage or
 
 Error Handling in Nuxt is really straight forward. All we have to do is to create a `error.vue` component in the root directory.
 
-```vue
+```html
 <template>
   <div class="mt-7 max-w-sm mx-auto text-center card">
     <p class="mt-7 text-7xl font-bold">{{ error.statusCode }}</p>
@@ -249,3 +249,32 @@ useHead({
 ```
 
 If you are a really cool frontend developer and want to stay with components use the [build-in components](https://nuxt.com/docs/getting-started/seo-meta#components), like `Head` or `Title`.
+
+
+### Fetching Data - Which Method Should I Use?
+When it comes to fetching data in Nuxt, many people (like me) are confused, because there are three different ways to fetch data: `useFetch`, `$fetch` and `useAsyncData`. 
+
+That's why here’s a table comparing `useAsyncData`, `useFetch`, and `$fetch` in Nuxt.js:
+
+| **Feature**        | **`useAsyncData`**                                | **`useFetch`**                                | **`$fetch`**                                     |
+|--------------------|------------------------------------------------|-----------------------------------------------|------------------------------------------------|
+| **Purpose**        | Fetch data before the page is rendered (SSR).  | Fetch data on both server (SSR) and client (CSR). | Fetch data dynamically after page render (CSR). |
+| **Execution**      | Runs on server-side during SSR or static generation. | Automatically detects environment and runs on server or client. | Runs during client-side rendering.             |
+| **Blocks Rendering**| Yes, blocks page rendering until data is fetched. | Blocks SSR, non-blocking on CSR.              | Non-blocking (runs after initial render).      |
+| **Context Access** | Cannot access `this` in the component.          | Part of Vue 3 Composition API, can access all composable features. | Can access `this` and works within the component. |
+| **When to Use**    | For static or pre-rendered data that must be available at the start. | For composable and flexible data fetching across environments. | For dynamic or client-side interactions where data is fetched post-render. |
+| **Ideal For**      | Initial page load with server-rendered content. | Scenarios requiring data fetching both during SSR and CSR. | Client-side updates or interactive components. |
+
+### Application Structure Utilities
+You can find different application structure utilities in a Nuxt application: composables, plugins and utils. And I don't know if it's just my problem, but I find it incredible hard, do understand which one has which purpose. That's why I've created this table:
+
+| **Feature**        | **Plugins**                                | **Composables**                             | **Utils**                                  |
+|--------------------|--------------------------------------------|---------------------------------------------|--------------------------------------------|
+| **Purpose**        | Extend Vue/Nuxt functionality globally by injecting dependencies or custom logic. | Reusable logic functions with Vue 3's Composition API for handling state or utilities. | General helper functions that are often imported directly into components. |
+| **Scope**          | Globally available throughout the entire app. | Scoped to components that import them, promoting code modularity. | Scoped to components or specific logic areas where they are used. |
+| **Lifecycle Access** | Can access Nuxt lifecycle hooks (`beforeNuxtRender`, `nuxtServerInit`). | Access to Vue 3 Composition API lifecycle hooks (e.g., `onMounted`). | Typically not lifecycle aware, but can be used within lifecycle hooks when needed. |
+| **Use Case**       | Registering third-party libraries (e.g., Axios, Vuex). | Abstracting complex logic (e.g., state management, data fetching). | Utility functions like date formatting or data manipulation. |
+| **Access Method**  | Automatically injected into components as `$` prefixed variables. | Imported explicitly in components and used as functions or state handlers. | Imported like standard JavaScript functions in any component. |
+| **When to Use**    | For initializing third-party libraries or global-level logic. | For reusable, component-agnostic state or logic that is used across many parts of the app. | For small, utility-specific functions that do not rely on the Vue/Nuxt ecosystem. |
+| **Global vs Local**| Global, available across the entire application. | Local to the components that use/import them. | Local, only imported where needed. |
+| **Ideal For**      | Dependency injection, authentication, or initializing external services like APIs. | Sharing state, composable logic, and reusable pieces of functionality like data fetching. | Helper utilities like string manipulation, math operations, etc. |
