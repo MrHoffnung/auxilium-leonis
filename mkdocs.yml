@@ -1,20 +1,22 @@
-site_name: Leo's Cheatsheets
+site_name: Auxilium Leonis
 theme:
   name: material
+  logo: assets/logo.svg
+  favicon: assets/logo.svg
   font:
     code: Roboto markdown_extensions
   palette:
     - scheme: default
-      primary: purple
-      accent: purple
+      primary: orange
+      accent: orange
       toggle:
         icon: material/weather-sunny
         name: Switch to dark mode
 
     # Dark mode
     - scheme: slate
-      primary: purple
-      accent: purple
+      primary: orange
+      accent: orange
       toggle:
         icon: material/weather-night
         name: Switch to light mode
@@ -22,6 +24,7 @@ theme:
     - navigation.expand
     - search.highlight
     - dark_mode
+    - content.code.copy
 
 nav:
   - Home: "index.md"
@@ -33,14 +36,17 @@ nav:
       - Vue & Nuxt:
           - Basics of Vue: "frameworks/vue-nuxt/basics-of-vue.md"
           - Basics of Nuxt: "frameworks/vue-nuxt/basics-of-nuxt.md"
+          - Testing Nuxt: "frameworks/vue-nuxt/testing-nuxt.md"
       - Symfony:
           - Basics of Symfony: "frameworks/symfony/basics-of-symfony.md"
+          - PHPUnit in Symfony: "frameworks/symfony/phpunit-in-symfony.md"
   - Dangerous & Outdated:
       - Basics of Symfony: "dangerous-outdated/basics-of-symfony.md"
       - Django Deployment on Render: "dangerous-outdated/django-deployment-on-render.md"
 
 plugins:
   - search
+  - mkdocs-video
 
 markdown_extensions:
   - toc:
@@ -49,6 +55,13 @@ markdown_extensions:
   - codehilite
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
 
 extra_javascript:
   - mathjax/config.js

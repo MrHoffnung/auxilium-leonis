@@ -1,5 +1,3 @@
-Here is the text converted to Markdown format:
-
 # Basics of Symfony
 
 <img src="https://www.svgrepo.com/show/342277/symfony.svg" width="150px" height="auto" />
