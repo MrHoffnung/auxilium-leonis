@@ -712,6 +712,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#fetching-data-which-method-should-i-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fetching Data - Which Method Should I Use?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#application-structure-utilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Application Structure Utilities
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -738,6 +756,27 @@
   
   <span class="md-ellipsis">
     Testing Nuxt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../state-management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    State Management
   </span>
   
 
@@ -1157,6 +1196,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#fetching-data-which-method-should-i-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fetching Data - Which Method Should I Use?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#application-structure-utilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Application Structure Utilities
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1209,45 +1266,45 @@
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    products/
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>        [id].vue -&gt; e.g. example.com/products/12
 </span></code></pre></div>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>&lt;template&gt;
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  &lt;div&gt;
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    &lt;p&gt;Product details for {{ id }}&lt;/p&gt;
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  &lt;/div&gt;
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>&lt;/template&gt;
+<div class="language-html highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Product details for {{ id }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
 </span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>&lt;script lang="ts" setup&gt;
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>const { id } = useRoute().params;
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>&lt;/script&gt;
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">lang</span><span class="o">=</span><span class="s">"ts"</span> <span class="na">setup</span><span class="p">&gt;</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useRoute</span><span class="p">().</span><span class="nx">params</span><span class="p">;</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>&lt;style&gt;&lt;/style&gt;
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
 </span></code></pre></div>
 <h3 id="linking-pages">Linking Pages<a class="headerlink" href="#linking-pages" title="Permanent link">¶</a></h3>
 <p>Like Vue (<code>RouterLink</code>), Nuxt has its own tag for creating links that increases efficiency and stays true to the philosophy of single-page applications: the <code>NuxtLink</code> tag. Additionally, this tag adds HTML classes, such as <code>router-link-active</code> and <code>router-link-exact-active</code>, that can help you style your application.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>&lt;NuxtLink to="/"&gt;Nuxt Dojo&lt;/NuxtLink&gt;
+<div class="language-html highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">&lt;</span><span class="nt">NuxtLink</span> <span class="na">to</span><span class="o">=</span><span class="s">"/"</span><span class="p">&gt;</span>Nuxt Dojo<span class="p">&lt;/</span><span class="nt">NuxtLink</span><span class="p">&gt;</span>
 </span></code></pre></div>
 <h2 id="layouts">Layouts<a class="headerlink" href="#layouts" title="Permanent link">¶</a></h2>
 <p>Layouts define the basic template structure of a Nuxt application by wrapping the pages. For example, they can include headers and footers on every page, thus avoiding a lot of boilerplate code. To create the default layout, just create <code>layouts/default.vue</code> in the root directory.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>&lt;template&gt;
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>  &lt;div&gt;
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    &lt;header&gt;
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>      &lt;nav&gt;
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>        &lt;NuxtLink to="/"&gt;Nuxt Dojo&lt;/NuxtLink&gt;
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>        &lt;ul&gt;
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>          &lt;li&gt;
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>            &lt;NuxtLink to="/"&gt;Home&lt;/NuxtLink&gt;
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>            &lt;NuxtLink to="/about"&gt;About&lt;/NuxtLink&gt;
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>            &lt;NuxtLink to="/products"&gt;Products&lt;/NuxtLink&gt;
-</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>          &lt;/li&gt;
-</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>        &lt;/ul&gt;
-</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>      &lt;/nav&gt;
-</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>    &lt;/header&gt;
+<div class="language-html highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>      <span class="p">&lt;</span><span class="nt">nav</span><span class="p">&gt;</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>        <span class="p">&lt;</span><span class="nt">NuxtLink</span> <span class="na">to</span><span class="o">=</span><span class="s">"/"</span><span class="p">&gt;</span>Nuxt Dojo<span class="p">&lt;/</span><span class="nt">NuxtLink</span><span class="p">&gt;</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>        <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>          <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>            <span class="p">&lt;</span><span class="nt">NuxtLink</span> <span class="na">to</span><span class="o">=</span><span class="s">"/"</span><span class="p">&gt;</span>Home<span class="p">&lt;/</span><span class="nt">NuxtLink</span><span class="p">&gt;</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>            <span class="p">&lt;</span><span class="nt">NuxtLink</span> <span class="na">to</span><span class="o">=</span><span class="s">"/about"</span><span class="p">&gt;</span>About<span class="p">&lt;/</span><span class="nt">NuxtLink</span><span class="p">&gt;</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>            <span class="p">&lt;</span><span class="nt">NuxtLink</span> <span class="na">to</span><span class="o">=</span><span class="s">"/products"</span><span class="p">&gt;</span>Products<span class="p">&lt;/</span><span class="nt">NuxtLink</span><span class="p">&gt;</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>          <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>        <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>      <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>    <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
 </span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>
-</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>    &lt;div&gt;
-</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>      &lt;!-- The slot tag is replaced by the actual content of the side --&gt;
-</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>      &lt;slot /&gt;
-</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>    &lt;/div&gt;
-</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>  &lt;/div&gt;
-</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>&lt;/template&gt;
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>      <span class="cm">&lt;!-- The slot tag is replaced by the actual content of the side --&gt;</span>
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>      <span class="p">&lt;</span><span class="nt">slot</span> <span class="p">/&gt;</span>
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
 </span></code></pre></div>
 <h3 id="overriding-the-default-layout">Overriding the Default Layout<a class="headerlink" href="#overriding-the-default-layout" title="Permanent link">¶</a></h3>
 <p>Sometimes you want to override the default layout, and guess what: it's not hard 🙂! You just need to create your new layout (e.g. "products.vue") in the "layouts/" folder and add this code on the page whose layout you want to override:</p>
@@ -1260,24 +1317,24 @@
 <h2 id="errors">Errors<a class="headerlink" href="#errors" title="Permanent link">¶</a></h2>
 <h3 id="handling">Handling<a class="headerlink" href="#handling" title="Permanent link">¶</a></h3>
 <p>Error Handling in Nuxt is really straight forward. All we have to do is to create a <code>error.vue</code> component in the root directory.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>&lt;template&gt;
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>  &lt;div class="mt-7 max-w-sm mx-auto text-center card"&gt;
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    &lt;p class="mt-7 text-7xl font-bold"&gt;{{ error.statusCode }}&lt;/p&gt;
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    &lt;p class="mt-7 text-6xl"&gt;Ooops.&lt;/p&gt;
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    &lt;p class="mt-7"&gt;{{ error.message }}&lt;/p&gt;
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    &lt;button class="btn my-7" @click="handleError"&gt;Go Home...&lt;/button&gt;
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>  &lt;/div&gt;
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>&lt;/template&gt;
+<div class="language-html highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"mt-7 max-w-sm mx-auto text-center card"</span><span class="p">&gt;</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">"mt-7 text-7xl font-bold"</span><span class="p">&gt;</span>{{ error.statusCode }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">"mt-7 text-6xl"</span><span class="p">&gt;</span>Ooops.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">"mt-7"</span><span class="p">&gt;</span>{{ error.message }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn my-7"</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">"handleError"</span><span class="p">&gt;</span>Go Home...<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
 </span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>&lt;script setup&gt;
-</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>// Accepts the error from Nuxt
-</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>defineProps({
-</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>  error: Object,
-</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>});
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">setup</span><span class="p">&gt;</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="c1">// Accepts the error from Nuxt</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="nx">defineProps</span><span class="p">({</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">  </span><span class="nx">error</span><span class="o">:</span><span class="w"> </span><span class="nb">Object</span><span class="p">,</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="p">});</span>
 </span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>
-</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>// Clearing the error
-</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>const handleError = () =&gt; clearError({ redirect: "/" });
-</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>&lt;/script&gt;
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="c1">// Clearing the error</span>
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="kd">const</span><span class="w"> </span><span class="nx">handleError</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">clearError</span><span class="p">({</span><span class="w"> </span><span class="nx">redirect</span><span class="o">:</span><span class="w"> </span><span class="s2">"/"</span><span class="w"> </span><span class="p">});</span>
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></code></pre></div>
 <h3 id="throwing">Throwing<a class="headerlink" href="#throwing" title="Permanent link">¶</a></h3>
 <p>Throwing error is obviously easier than handling them.</p>
@@ -1357,7 +1414,120 @@
 </span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">  </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s2">"Nuxt Dojo | Merch"</span><span class="p">,</span>
 </span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="p">});</span>
 </span></code></pre></div>
-<p>If you are a really cool frontend developer and want to stay with components use the <a href="https://nuxt.com/docs/getting-started/seo-meta#components">build-in components</a>, like <code>Head</code> or <code>Title</code>.</p></div>
+<p>If you are a really cool frontend developer and want to stay with components use the <a href="https://nuxt.com/docs/getting-started/seo-meta#components">build-in components</a>, like <code>Head</code> or <code>Title</code>.</p>
+<h3 id="fetching-data-which-method-should-i-use">Fetching Data - Which Method Should I Use?<a class="headerlink" href="#fetching-data-which-method-should-i-use" title="Permanent link">¶</a></h3>
+<p>When it comes to fetching data in Nuxt, many people (like me) are confused, because there are three different ways to fetch data: <code>useFetch</code>, <code>$fetch</code> and <code>useAsyncData</code>. </p>
+<p>That's why here’s a table comparing <code>useAsyncData</code>, <code>useFetch</code>, and <code>$fetch</code> in Nuxt.js:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Feature</strong></th>
+<th><strong><code>useAsyncData</code></strong></th>
+<th><strong><code>useFetch</code></strong></th>
+<th><strong><code>$fetch</code></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Purpose</strong></td>
+<td>Fetch data before the page is rendered (SSR).</td>
+<td>Fetch data on both server (SSR) and client (CSR).</td>
+<td>Fetch data dynamically after page render (CSR).</td>
+</tr>
+<tr>
+<td><strong>Execution</strong></td>
+<td>Runs on server-side during SSR or static generation.</td>
+<td>Automatically detects environment and runs on server or client.</td>
+<td>Runs during client-side rendering.</td>
+</tr>
+<tr>
+<td><strong>Blocks Rendering</strong></td>
+<td>Yes, blocks page rendering until data is fetched.</td>
+<td>Blocks SSR, non-blocking on CSR.</td>
+<td>Non-blocking (runs after initial render).</td>
+</tr>
+<tr>
+<td><strong>Context Access</strong></td>
+<td>Cannot access <code>this</code> in the component.</td>
+<td>Part of Vue 3 Composition API, can access all composable features.</td>
+<td>Can access <code>this</code> and works within the component.</td>
+</tr>
+<tr>
+<td><strong>When to Use</strong></td>
+<td>For static or pre-rendered data that must be available at the start.</td>
+<td>For composable and flexible data fetching across environments.</td>
+<td>For dynamic or client-side interactions where data is fetched post-render.</td>
+</tr>
+<tr>
+<td><strong>Ideal For</strong></td>
+<td>Initial page load with server-rendered content.</td>
+<td>Scenarios requiring data fetching both during SSR and CSR.</td>
+<td>Client-side updates or interactive components.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="application-structure-utilities">Application Structure Utilities<a class="headerlink" href="#application-structure-utilities" title="Permanent link">¶</a></h3>
+<p>You can find different application structure utilities in a Nuxt application: composables, plugins and utils. And I don't know if it's just my problem, but I find it incredible hard, do understand which one has which purpose. That's why I've created this table:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Feature</strong></th>
+<th><strong>Plugins</strong></th>
+<th><strong>Composables</strong></th>
+<th><strong>Utils</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Purpose</strong></td>
+<td>Extend Vue/Nuxt functionality globally by injecting dependencies or custom logic.</td>
+<td>Reusable logic functions with Vue 3's Composition API for handling state or utilities.</td>
+<td>General helper functions that are often imported directly into components.</td>
+</tr>
+<tr>
+<td><strong>Scope</strong></td>
+<td>Globally available throughout the entire app.</td>
+<td>Scoped to components that import them, promoting code modularity.</td>
+<td>Scoped to components or specific logic areas where they are used.</td>
+</tr>
+<tr>
+<td><strong>Lifecycle Access</strong></td>
+<td>Can access Nuxt lifecycle hooks (<code>beforeNuxtRender</code>, <code>nuxtServerInit</code>).</td>
+<td>Access to Vue 3 Composition API lifecycle hooks (e.g., <code>onMounted</code>).</td>
+<td>Typically not lifecycle aware, but can be used within lifecycle hooks when needed.</td>
+</tr>
+<tr>
+<td><strong>Use Case</strong></td>
+<td>Registering third-party libraries (e.g., Axios, Vuex).</td>
+<td>Abstracting complex logic (e.g., state management, data fetching).</td>
+<td>Utility functions like date formatting or data manipulation.</td>
+</tr>
+<tr>
+<td><strong>Access Method</strong></td>
+<td>Automatically injected into components as <code>$</code> prefixed variables.</td>
+<td>Imported explicitly in components and used as functions or state handlers.</td>
+<td>Imported like standard JavaScript functions in any component.</td>
+</tr>
+<tr>
+<td><strong>When to Use</strong></td>
+<td>For initializing third-party libraries or global-level logic.</td>
+<td>For reusable, component-agnostic state or logic that is used across many parts of the app.</td>
+<td>For small, utility-specific functions that do not rely on the Vue/Nuxt ecosystem.</td>
+</tr>
+<tr>
+<td><strong>Global vs Local</strong></td>
+<td>Global, available across the entire application.</td>
+<td>Local to the components that use/import them.</td>
+<td>Local, only imported where needed.</td>
+</tr>
+<tr>
+<td><strong>Ideal For</strong></td>
+<td>Dependency injection, authentication, or initializing external services like APIs.</td>
+<td>Sharing state, composable logic, and reusable pieces of functionality like data fetching.</td>
+<td>Helper utilities like string manipulation, math operations, etc.</td>
+</tr>
+</tbody>
+</table></div>
 
 
 
