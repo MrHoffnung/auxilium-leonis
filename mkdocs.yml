@@ -37,6 +37,7 @@ nav:
           - Basics of Vue: "frameworks/vue-nuxt/basics-of-vue.md"
           - Basics of Nuxt: "frameworks/vue-nuxt/basics-of-nuxt.md"
           - Testing Nuxt: "frameworks/vue-nuxt/testing-nuxt.md"
+          - State Management: "frameworks/vue-nuxt/state-management.md"
       - Symfony:
           - Basics of Symfony: "frameworks/symfony/basics-of-symfony.md"
           - PHPUnit in Symfony: "frameworks/symfony/phpunit-in-symfony.md"
